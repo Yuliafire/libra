@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brooklyn Public Library</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="./assets/icons/favicon_io/site.webmanifest">
+    <link rel="icon" type="image/x-icon" href="./assets/icons/favicon_io/favicon-32x32.png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./media.css">
+</head>
+
+<body>
+    <!-- <div class="wrapper-modal" id="wrapperModal"></div> -->
+
+    <div class="wrapper">
+
+        <!--header start-->
+        <header class="header">
+            <div class="header__container">
+                <div class="header__logo">
+                    <h1 class="logo__title"><a href="#">Brooklyn Public Library</a></h1>
+                </div>
+                <button id="nav-btn" class="header__burger-btn">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+
+                <div class="header__menu-flex">
+                    <nav id="menu" class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a href="#about" class="menu__link">About</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#favorites" class="menu__link">Favorites</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#coffee-shop" class="menu__link">Coffee shop</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#contacts" class="menu__link">Contacts</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#library-card" class="menu__link">Library Card</a>
+                            </li>
+                        </ul>
+
+                    </nav>
+
+                    <div class="header__profile-module">
+                        <button class="button-inits close" id ="buttonInits"></button>
+
+                        <button class="profile-icon btnLogin-popup " id="btnLoginIcon"><a href="#" id="svgProfileIcon"><svg width="28"
+                                    height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14ZM18.6667 7.77778C18.6667 10.3551 16.5774 12.4444 14.0001 12.4444C11.4227 12.4444 9.33339 10.3551 9.33339 7.77778C9.33339 5.20045 11.4227 3.11111 14.0001 3.11111C16.5774 3.11111 18.6667 5.20045 18.6667 7.77778ZM19.4998 16.2781C20.9584 17.7367 21.7778 19.715 21.7778 21.7778H14L6.22225 21.7778C6.22225 19.715 7.0417 17.7367 8.50031 16.2781C9.95893 14.8194 11.9372 14 14 14C16.0628 14 18.0411 14.8194 19.4998 16.2781Z" />
+                                </svg></a></button>
+
+    <!--menu nonauth-->
+    <div class="menu-profile-nonauth close" id="menuProfileNonauth">
+        <div class="menu-profile-nonauth__container">
+            <h3 class="menu-profile-nonauth__title">Profile</h3>
+            <div class="menu-profile-nonauth__buttons">
+                <button type="button" class="log-button" id="loginBtn">Log In</button>
+                <button type="button" class="reg-button" id="regBtn">Register</button>
+            </div>
+        </div>
+    </div>
+
+     <!--menu auth-->
+     <div class="menu-profile-auth close" id="menuProfileAuth">
+        <div class="menu-profile-auth__container">
+            <h3 class="menu-profile-auth__title">Profile</h3>
+            <div class="menu-profile-auth__buttons">
+                <button type="button" id="btnProfile">My profile</button>
+                <button type="button" id="logOutBtn">Log Out</button>
+            </div>
+         </div>
+      </div>
+
+    </div>
+   </div>
+  </div>
+</header>
+<!--header end-->
+
+        <main>
+            <!--start of welcome section-->
+            <section id="welcome" class="welcome">
+                <div class="welcome__container">
+                    <h2 class="welcome__title">Welcome&nbsp;<br>to the Brooklyn<br>Library</h2>
+                </div>
+            </section>
+            <!--end of welcome section-->
+
+            <!--start of about section-->
+            <section id="about" class="about">
+                <div class="about__container">
+                    <div class="about__title">
+                        <h2>About</h2>
+                        <p>The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop
+                            inside
+                        </p>
+                    </div>
+
+                    <div class="about__slider-wrapper">
+                        <button class="button-prev"><svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 7.5L9 12.5L15 17.5" stroke="black" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+
+                        <div class="slider-container">
+                            <div class="slider-track">
+                                <div class="slider-item"><img src="./assets/img/image1.jpg" alt="slide"></div>
+                                <div class="slider-item"><img src="./assets/img/image2.jpg" alt="slide"></div>
+                                <div class="slider-item"><img src="./assets/img/image3.jpg" alt="slide"></div>
+                                <div class="slider-item"><img src="./assets/img/image4.jpg" alt=""></div>
+                                <div class="slider-item"><img src="./assets/img/image5.jpg" alt=""></div>
+                            </div>
+                        </div>
+                        <button class="button-next">
+                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 17.5L15 12.5L9 7.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="about__pagination">
+                    <button class="pagination-button"></button>
+                    <button class="pagination-button medium"></button>
+                    <button class="pagination-button active"></button>
+                    <button class="pagination-button medium"></button>
+                    <button class="pagination-button"></button>
+                </div>
+          </div>
+    </section>
+    <!--end of about section-->
+
+    <!--start of favorites section-->
+    <section id="favorites" class="favorites">
+        <div class="favorites__container">
+            <div class="favorites__title">
+                <h2>Favorites</h2>
+            </div>
+            <div class="favorites__seasons">
+                <p>Pick favorites of season</p>
+                <form class="favorites__form">
+                    <label class="favorites__label">
+                        <input class="input__radio" type="radio" name="season" value="Winter" checked id="inputRadioWinter">
+                        <span class="stlradio"></span>
+                        <span class="text">Winter</span>
+                    </label>
+                    <label class="favorites__label">
+                        <input class="input__radio" type="radio" name="season" value="Spring" id="inputRadioSpring">
+                        <span class="stlradio"></span>
+                        <span class="text">Spring</span>
+                    </label>
+                    <label class="favorites__label">
+                        <input class="input__radio" type="radio" name="season" value="Summer" id="inputRadioSummer">
+                        <span class="stlradio"></span>
+                        <span class="text">Summer</span>
+                    </label>
+                    <label class="favorites__label">
+                        <input class="input__radio" type="radio" name="season" value="Autumn" id="inputRadioFall">
+                        <span class="stlradio"></span>
+                        <span class="text">Autumn</span>
+                    </label>
+                </form>
+            </div>
+
+        <div class="favorites__books-cont">
+                <!--winter books start-->
+                <div class="wrapper-winter-books" id="winterBooksDiv">
+
+                    <div class="favorites__books-cont-first">
+                        <div class="book-item first-book">
+                            <div class="book-text-first">
+
+                                <h3 class="book-item__title">Staff Picks</h3>
+                                <p class="book-info">the book eaters<br><span>by sunyi dean</span></p>
+                                <p class="book-plot">
+                                    An unusual sci-fi story about a book eater woman who tries desperately to save her
+                                    dangerous mind-eater son from tradition and certain death. Complete with
+                                    dysfunctional
+                                    family values, light Sapphic romance, and a strong, complex protagonist. Not for the
+                                    faint of heart.
+                                </p>
+                            </div>
+                            <button class="buy" type="button" id="buyBtn">Buy</button>
+                            <div class="book-cover"><img src="./assets/img/book1.png" alt="book cover"></div>
+                        </div>
+
+                        <div class="book-item second-book">
+                            <div class="book-text-second">
+                                <h3 class="book-item__title">Staff Picks</h3>
+                                <p class="book-info">Cackle
+                                    <br><span>By Rachel Harrison</span>
+                                </p>
+                                <p class="book-plot">
+                                    Are your Halloween movies of choice The Witches of Eastwick and Practical Magic?
+                                    Look no
+                                    further than here - where a woman recovering from a breakup moves to a quaint town
+                                    in
+                                    upstate New York and befriends a beautiful witch.
+                                </p>
+                            </div>
+                            <button class="buy" type="button" id="buyBtn">Buy</button>
+                            <div class="book-cover"><img src="./assets/img/book2.png" alt="book cover"></div>
+
+                        </div>
+                    </div>
+
+                    <div class="favorites__books-cont-second">
+                        <div class="book-item">
+                            <div class="book-text-first">
+                                <h3 class="book-item__title">Staff Picks</h3>
+                                <p class="book-info">Dante: Poet of the Secular World<br>
+                                    <span>By Erich Auerbach</span>
+                                </p>
+                                <p class="book-plot">Auerbach's engaging book places the 'Comedy' within the tradition
+                                    of
+                                    epic, tragedy, and philosophy in general, arguing for Dante's uniqueness as one who
+                                    raised the individual and his<br> drama of soul into something of divine
+                                    significance—an
+                                    inspired introduction to Dante's main themes.
+                                </p>
+                            </div>
+                            <button class="buy" type="button" id="buyBtn">Buy</button>
+                            <div class="book-cover"><img src="./assets/img/book4.png" alt="book cover"></div>
+                        </div>
+
+                        <div class="book-item">
+                            <div class="book-text-fourth">
+                                <h3 class="book-item__title">Staff Picks</h3>
+                                <p class="book-info">The Last Queen<br>
+                                    <span>By Clive Irving</span>
+                                </p>
+                                <p class="book-plot">A timely and revelatory new biography of Queen Elizabeth (and her
+                                    family) exploring how the Windsors have evolved and thrived as the modern world has
+                                    changed around them.</p>
+                                <button class="own" type="button" disabled>Own</button>
+                                <div class="book-cover"><img src="./assets/img/book3.png" alt="book cover"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--winter books end-->
+                <!--spring books start-->
+               <div class="wrapper-spring-books close" id="springBooksDiv">
+                    <!-- <div class="favorites__books-cont-third" id="springBooksDiv"> -->
+                        <div class="book-item">
+                            <h3 class="book-item__title">Staff Picks</h3>
+                            <p class="book-info">Dante: Poet of the Secular World<br>
+                                <span>By Erich Auerbach</span>
+                            </p>
+                            <p class="book-plot">Auerbach's engaging book places the 'Comedy' within the tradition of
+                                epic,
+                                tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the
+                                individual and his drama of soul into something of divine significance—an inspired
+                                introduction to Dante's main themes.
+                            </p>
+                            <button class="buy" type="button" id="buyBtn">Buy</button>
+                            <div class="book-cover"><img src="./assets/img/book5.jpg" alt="book cover"></div>
+                        </div>
+
+                        <div class="book-item">
+                            <h3 class="book-item__title">Staff Picks</h3>
+                            <p class="book-info">The Last Queen<br>
+                                <span>By Clive Irving</span>
+                            </p>
+                            <p class="book-plot">A timely and revelatory new biography of Queen Elizabeth (and her
+                                family)
+                                exploring how the Windsors have evolved and thrived as the modern world has changed
+                                around
+                                them.</p>
+                            <button class="buy" type="button" id="buyBtn">Buy</button>
+                            <div class="book-cover"><img src="./assets/img/book6.jpg" alt="book cover"></div>
+                        </div>
+                        <div class="favorites__books-cont-fourth">
+                            <div class="book-item">
+                                <div class="book-text">
+                                    <h3 class="book-item__title">Staff Picks</h3>
+                                    <p class="book-info">Dante: Poet of the Secular World<br>
+                                        <span>By Erich Auerbach</span>
+                                    </p>
+                                    <p class="book-plot">Auerbach's engaging book places the 'Comedy' within the tradition of
+                                        epic,
+                                        tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the
+                                        individual and his drama of soul into something of divine significance—an inspired
+                                        introduction to Dante's main themes.
+                                    </p>
+                                    <button class="buy" type="button" id="buyBtn">Buy</button>
+                                    <div class="book-cover"><img src="./assets/img/book7.png" alt="book cover"></div>
+                                </div>
+                            </div>
+        
+                            <div class="book-item">
+                                <h3 class="book-item__title">Staff Picks</h3>
+                                <p class="book-info">The Last Queen<br>
+                                    <span>By Clive Irving</span>
+                                </p>
+                                <p class="book-plot">A timely and revelatory new biography of Queen Elizabeth (and her family)
+                                    exploring how the Windsors have evolved and thrived as the modern world has changed around
+                                    them.
+                                </p>
+                                <button class="own" type="button" disabled>Own</button>
+                                <div class="book-cover"><img src="./assets/img/book8.jpg" alt="book cover"></div>
+                            </div>
+                        </div>
+               </div>
+               <!--spring books end-->
+               <!--summer books start-->
+               <div class="wrapper-summer-books close" id="summerBooksDiv">
+                <div class="favorites__books-cont-fifth">
+                    <div class="book-item">
+                        <h3 class="book-item__title">Staff Picks</h3>
+                        <p class="book-info">Dante: Poet of the Secular World<br>
+                            <span>By Erich Auerbach</span>
+                        </p>
+                        <p class="book-plot">Auerbach's engaging book places the 'Comedy' within the tradition of epic,
+                            tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the
+                            individual and his drama of soul into something of divine significance—an inspired
+                            introduction
+                            to Dante's main themes.
+                        </p>
+                        <button class="buy" type="button" id="buyBtn">Buy</button>
+                        <div class="book-cover"><img src="./assets/img/book9.jpg" alt="book cover"></div>
+                    </div>
+
+                    <div class="book-item">
+                        <h3 class="book-item__title">Staff Picks</h3>
+                        <p class="book-info">The Last Queen<br>
+                            <span>By Clive Irving</span>
+                        </p>
+                        <p class="book-plot">A timely and revelatory new biography of Queen Elizabeth (and her family)
+                            exploring how the Windsors have evolved and thrived as the modern world has changed around
+                            them.
+                        </p>
+                        <button class="buy" type="button" id="buyBtn">Buy</button>
+                        <div class="book-cover"><img src="./assets/img/book10.png" alt="book cover"></div>
+                    </div>
+                </div>
+
+                <div class="favorites__books-cont-sixth">
+                    <div class="book-item">
+                        <h3 class="book-item__title">Staff Picks</h3>
+                        <p class="book-info">Dante: Poet of the Secular World<br>
+                            <span>By Erich Auerbach</span>
+                        </p>
+                        <p class="book-plot">Auerbach's engaging book places the 'Comedy' within the tradition of epic,
+                            tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the
+                            individual and his drama of soul into something of divine significance—an inspired
+                            introduction
+                            to Dante's main themes.
+                        </p>
+                        <button class="buy" type="button" id="buyBtn">Buy</button>
+                        <div class="book-cover"><img src="./assets/img/book11.png" alt="book cover"></div>
+                    </div>
+
+                    <div class="book-item">
+                        <h3 class="book-item__title">Staff Picks</h3>
+                        <p class="book-info">The Last Queen<br>
+                            <span>By Clive Irving</span>
+                        </p>
+                        <p class="book-plot">A timely and revelatory new biography of Queen Elizabeth (and her family)
+                            exploring how the Windsors have evolved and thrived as the modern world has changed around
+                            them.
+                        </p>
+                        <button class="buy" type="button" id="buyBtn">Buy</button>
+                        <div class="book-cover"><img src="./assets/img/book12.png" alt="book cover"></div>
+                    </div>
+                </div>
+               </div>
+               <!--summer books end-->
+               <!--fall books start-->
+               <div class="wrapper-fall-books close" id="fallBooksDiv">
+                <div class="favorites__books-cont-seventh">
+                    <div class="book-item">
+                        <h3 class="book-item__title">Staff Picks</h3>
+                        <p class="book-info">Dante: Poet of the Secular World<br>
+                            <span>By Erich Auerbach</span>
+                        </p>
+                        <p class="book-plot">Auerbach's engaging book places the 'Comedy' within the tradition of epic,
+                            tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the
+                            individual and his drama of soul into something of divine significance—an inspired
+                            introduction
+                            to Dante's main themes.
+                        </p>
+                        <button class="buy" type="button" id="buyBtn">Buy</button>
+                        <div class="book-cover"><img src="./assets/img/book13.png" alt="book cover"></div>
+                    </div>
+
+                    <div class="book-item">
+                        <h3 class="book-item__title">Staff Picks</h3>
+                        <p class="book-info">The Last Queen<br>
+                            <span>By Clive Irving</span>
+                        </p>
+                        <p class="book-plot">A timely and revelatory new biography of Queen Elizabeth (and her family)
+                            exploring how the Windsors have evolved and thrived as the modern world has changed around
+                            them.
+                        </p>
+                        <button class="buy" type="button" id="buyBtn">Buy</button>
+                        <div class="book-cover"><img src="./assets/img/book14.png" alt="book cover"></div>
+                    </div>
+                </div>
+
+                <div class="favorites__books-cont-eighth">
+                    <div class="book-item">
+                        <h3 class="book-item__title">Staff Picks</h3>
+                        <p class="book-info">Dante: Poet of the Secular World<br>
+                            <span>By Erich Auerbach</span>
+                        </p>
+                        <p class="book-plot">Auerbach's engaging book places the 'Comedy' within the tradition of epic,
+                            tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the
+                            individual and his drama of soul into something of divine significance—an inspired
+                            introduction
+                            to Dante's main themes.
+                        </p>
+                        <button class="buy" type="button" id="buyBtn">Buy</button>
+                        <div class="book-cover"><img src="./assets/img/book15.png" alt="book cover"></div>
+                    </div>
+
+                    <div class="book-item">
+                        <h3 class="book-item__title">Staff Picks</h3>
+                        <p class="book-info">The Last Queen<br>
+                            <span>By Clive Irving</span>
+                        </p>
+                        <p class="book-plot">A timely and revelatory new biography of Queen Elizabeth (and her family)
+                            exploring how the Windsors have evolved and thrived as the modern world has changed around
+                            them.
+                        </p>
+                        <button class="buy" type="button" id="buyBtn">Buy</button>
+                        <div class="book-cover"><img src="./assets/img/book16.png" alt="book cover"></div>
+                    </div>
+                </div>
+               </div>
+               <!--fall books end-->
+         </div>
+       </div>
+    </section>
+    <!--end of favorites section-->
+
+    <!--start of coffee-shop section-->
+    <section id="coffee-shop" class="coffee-shop">
+        <div class="coffee-shop__container">
+            <div class="coffee-shop__title">
+                <h2>Coffee Shop</h2>
+                <p>
+                    In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and
+                    friendly
+                    conversation.
+                    you can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also
+                    you
+                    can try desserts<br>from bakery.
+                </p>
+            </div>
+            <div class="coffee-shop__menu">
+
+                <div class="coffee-shop__menu-drinks">
+                    <h3>Coffee & Tea</h3>
+                    <div class="menu-drinks__item">
+                        <span class="menu-drinks__item-title">Cold Brew Coffee</span>
+                        <div class="line"></div>
+                        <span class="menu-drinks__item-price">$3</span>
+                    </div>
+
+                    <div class="menu-drinks__item">
+                        <span class="menu-drinks__item-title">French Press Pot</span>
+                        <div class="line"></div>
+                        <span class="menu-drinks__item-price">$5</span>
+                    </div>
+
+                    <div class="menu-drinks__item">
+                        <span class="menu-drinks__item-title">Espresso</span>
+                        <div class="line"></div>
+                        <span class="menu-drinks__item-price">$2</span>
+                    </div>
+
+                    <div class="menu-drinks__item">
+                        <span class="menu-drinks__item-title">Cappuccino</span>
+                        <div class="line"></div>
+                        <span class="menu-drinks__item-price">$4</span>
+                    </div>
+
+                    <div class="menu-drinks__item">
+                        <span class="menu-drinks__item-title">Hot tea</span>
+                        <div class="line"></div>
+                        <span class="menu-drinks__item-price">$2</span>
+                    </div>
+
+                    <div class="menu-drinks__item">
+                        <span class="menu-drinks__item-title">Cold tea</span>
+                        <div class="line"></div>
+                        <span class="menu-drinks__item-price">$2</span>
+                    </div>
+                </div>
+
+                <div class="coffee-shop__menu-desserts">
+                    <h3>Desserts & Cakes</h3>
+
+                    <div class="menu-desserts__item">
+                        <span class="menu-desserts__item-title">Forest Gateau</span>
+                        <div class="line"></div>
+                        <span class="menu-desserts__item-price">$16</span>
+                    </div>
+
+                    <div class="menu-desserts__item">
+                        <span class="menu-desserts__item-title">Blue Moon</span>
+                        <div class="line"></div>
+                        <span class="menu-desserts__item-price">$16</span>
+                    </div>
+
+                    <div class="menu-desserts__item">
+                        <span class="menu-desserts__item-title">Truffle Cake</span>
+                        <div class="line"></div>
+                        <span class="menu-desserts__item-price">$15</span>
+                    </div>
+
+                    <div class="menu-desserts__item">
+                        <span class="menu-desserts__item-title">Chocolate Cake</span>
+                        <div class="line"></div>
+                        <span class="menu-desserts__item-price">$18</span>
+                    </div>
+
+                    <div class="menu-desserts__item">
+                        <span class="menu-desserts__item-title">Poet’s Dream Cake</span>
+                        <div class="line"></div>
+                        <span class="menu-desserts__item-price">$16</span>
+                    </div>
+
+                    <div class="menu-desserts__item">
+                        <span class="menu-desserts__item-title">Pineapple Cake</span>
+                        <div class="line"></div>
+                        <span class="menu-desserts__item-price">$14</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--end of coffee-shop section-->
+
+    <!--start of contact section-->
+    <section id="contacts" class="contacts">
+        <div class="contacts__container">
+            <div class="contacts__title">
+                <h2>Our Contacts</h2>
+            </div>
+            <div class="contacts__wrapper">
+
+                <div class="contacts__wrapper-info">
+                    <h3><b>For all Library inquiries:</b></h3>
+                    <ul class="info__phone-number">
+                        <li>
+                            <p>Please call
+                                <a href="tel:(617)7302370 ">(617) 730-2370</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>For TTY service, please call<a href="tel:(617)7302370"> (617) 730-2370</a></p>
+                        </li>
+                        <li>
+                            <p>Putterham Library:<a href="tel:(617)7302385 "> (617) 730-2385</a></p>
+                        </li>
+                    </ul>
+
+                    <div class="info__library-director">
+                        <h3><b>Senior Staff</b></h3>
+                        <p class="mail">Library Director: <a href="mailto:AmandaHirst@gmail.com">Amanda Hirst</a></p>
+                    </div>
+                </div>
+
+                <div class="contacts__wrapper-location">
+                    <img src="./assets/img/map.jpg" alt="map">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--end of contact section-->
+
+    <!--start of digital-library-cards section-->
+    <section id="libraryCardNotChecked" class="library-card">
+        <!--before log in-->
+        <div class="library-card__container" id="libraryCardNotchecked">
+            <div class="library-card__title">
+                <h2>Digital Library Cards</h2>
+            </div>
+
+            <div class="library-cards-container">
+                <div class="find-card">
+                    <h2>Find your Library card</h2>
+                    <div class="form-container">
+                        <form>
+                            <div class="form-wrapper">
+                                <h3>Brooklyn Public Library</h3>
+                                <div class="input-flex">
+                                    <input type="text" placeholder="Reader's name" pattern="^[a-zA-Z] + $">
+                                    <input type="text" placeholder="Card number" pattern="^[A-Z]{1}[0-9] + $">
+                                </div>
+
+                            </div>
+                        </form>
+                        <button id="checkCard" class="check-card"><b>Check the card</b></button>
+                    </div>
+                </div>
+
+                <div class="get-card">
+                    <div class="get-card__text">
+                        <h2>Get a reader card</h2>
+                        <p>You will be able to see a reader card after logging into account or you can register a new
+                            account</p>
+                    </div>
+                    <div class="buttons">
+                        <button class="register-button" id="signUp">Sign Up</button>
+                        <button class="login-button" id="btnLogInSecond" type="submit">Log In</button>
+                        <!-- <button class="button">Log In</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--before log in-->
+
+        <!--after log in-->
+
+        <div class="library-card__container after-log-in close" id="libraryCardChecked">
+            <div class="library-card__title">
+                <h2>Digital Library Cards</h2>
+            </div>
+
+            <div class="library-cards-container">
+                <div class="find-card">
+                    <h2>Find your Library card</h2>
+                    <div class="form-container">
+                        <form>
+                            <div class="form-wrapper">
+                                <h3>Brooklyn Public Library</h3>
+                                <div class="input-flex">
+                                    <input type="text" placeholder="John Doe" pattern="^[a-zA-Z] + $">
+                                    <input type="text" placeholder="F00234030" pattern="^[A-Z]{1}[0-9] + $">
+                                </div>
+
+                            </div>
+                        </form>
+                        <!---
+                    <button><b>Check the card</b></button>-->
+                    </div>
+                </div>
+
+                <div class="get-card">
+                    <div class="get-card__text">
+                        <h2>Visit your profile</h2>
+                        <p>With a digital library card you get free access to the Library’s wide array of digital
+                            resources
+                            including e-books, databases, educational resources, and more.</p>
+                    </div>
+                    <div class="buttons">
+                        <!--<button class="button">Sign Up</button>-->
+                        <button class="button" id="profileBtnLink">Profile</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--end of digital-library-cards section-->
+    </main>
+
+    <!--start of footer-->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer-wrapper">
+                <div class="footer-wrapper__top">
+                    <div class="footer-wrapper__top-first">
+                        <div class="footer-wrapper__top-address">
+                            <a href="https://goo.gl/maps/1YUgcxQmFzGKGNr46">286 Cadman Plaza, New York,<br> NY 11238,
+                                United
+                                States</a>
+                        </div>
+                        <div class="business-days">
+                            <p>Mon - Fri<br>
+                                08:00 am - 07:00 pm</p>
+                        </div>
+                    </div>
+
+                    <div class="footer-wrapper__top-second">
+                        <div class="footer-wrapper__top-social">
+                            <ul class="social-links">
+                                <li><a href="https://twitter.com/brklib"><svg width="24" height="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M22.9912 3.95021C22.9913 3.77357 22.9447 3.60007 22.8559 3.44735C22.7671 3.29464 22.6395 3.16817 22.486 3.08084C22.3324 2.9935 22.1585 2.94842 21.9819 2.95017C21.8053 2.95193 21.6323 3.00046 21.4805 3.09083C20.8952 3.43921 20.265 3.70601 19.6075 3.88383C18.6685 3.07806 17.4708 2.63713 16.2335 2.64164C14.8761 2.6432 13.5724 3.17223 12.5977 4.11702C11.623 5.06181 11.0537 6.3484 11.0099 7.70512C8.33384 7.27838 5.90849 5.88164 4.19631 3.78126C4.09315 3.65609 3.9614 3.55757 3.81217 3.494C3.66295 3.43043 3.50062 3.40368 3.33889 3.41601C3.17725 3.42932 3.02128 3.4818 2.88448 3.56892C2.74768 3.65603 2.63416 3.77516 2.55373 3.91601C2.14126 4.63582 1.90436 5.44276 1.86228 6.27131C1.8202 7.09986 1.97412 7.92666 2.31154 8.68456L2.30959 8.68651C2.15794 8.77991 2.03278 8.91066 1.94609 9.06625C1.85941 9.22185 1.81409 9.39708 1.81447 9.57519C1.81263 9.72211 1.82145 9.86898 1.84084 10.0146C1.94298 11.2729 2.50062 12.4507 3.4092 13.3271C3.34756 13.4446 3.30994 13.5731 3.29854 13.7052C3.28714 13.8373 3.30218 13.9704 3.34279 14.0967C3.7389 15.3308 4.58129 16.3727 5.7051 17.0185C4.56334 17.46 3.33052 17.614 2.11525 17.4668C1.89032 17.4386 1.66248 17.4876 1.4691 17.6059C1.27572 17.7242 1.12828 17.9047 1.05097 18.1178C0.973654 18.3309 0.97106 18.5639 1.04361 18.7787C1.11616 18.9935 1.25955 19.1772 1.45025 19.2998C3.54034 20.646 5.97393 21.3617 8.46002 21.3613C11.2793 21.393 14.03 20.4921 16.2843 18.7988C18.5385 17.1054 20.17 14.7145 20.9248 11.998C21.2779 10.8146 21.4582 9.58648 21.46 8.35157C21.46 8.28614 21.46 8.21876 21.459 8.15138C21.9811 7.58831 22.3856 6.92668 22.6487 6.20527C22.9118 5.48387 23.0283 4.7172 22.9912 3.95021ZM19.6846 7.16212C19.5194 7.35746 19.4358 7.60891 19.4512 7.86427C19.461 8.02927 19.46 8.19527 19.46 8.35157C19.4579 9.39511 19.305 10.4329 19.0059 11.4326C18.3894 13.744 17.015 15.7817 15.103 17.2192C13.1909 18.6568 10.8517 19.4111 8.46002 19.3613C7.6009 19.3616 6.74474 19.2606 5.90924 19.0606C6.97465 18.7172 7.97083 18.1879 8.85162 17.4971C9.01385 17.3693 9.13257 17.1945 9.19151 16.9967C9.25044 16.7988 9.2467 16.5875 9.18079 16.3918C9.11489 16.1961 8.99005 16.0257 8.8234 15.9038C8.65675 15.7819 8.45647 15.7145 8.25002 15.7109C7.41885 15.698 6.62515 15.363 6.03615 14.7764C6.18557 14.7481 6.33401 14.7129 6.48147 14.6709C6.69748 14.6094 6.88651 14.477 7.01813 14.295C7.14975 14.1131 7.21629 13.8921 7.20704 13.6677C7.1978 13.4433 7.1133 13.2285 6.96715 13.058C6.82101 12.8874 6.62173 12.7711 6.40139 12.7275C5.91893 12.6323 5.46494 12.427 5.0747 12.1277C4.68447 11.8284 4.36852 11.4432 4.15139 11.002C4.33212 11.0266 4.514 11.0419 4.69631 11.0479C4.91289 11.0511 5.1249 10.9854 5.30169 10.8603C5.47847 10.7351 5.61086 10.5569 5.67971 10.3516C5.74569 10.1443 5.74229 9.92123 5.67004 9.7161C5.59778 9.51096 5.46061 9.33499 5.27932 9.21485C4.83947 8.92182 4.47916 8.52427 4.23068 8.0578C3.98219 7.59134 3.85328 7.07052 3.85549 6.54201C3.85549 6.47561 3.85744 6.4092 3.86135 6.34377C6.10261 8.43402 9.00967 9.66621 12.0703 9.82326C12.2248 9.82934 12.3787 9.80024 12.5203 9.73816C12.6619 9.67607 12.7875 9.58262 12.8877 9.46486C12.9869 9.34596 13.0571 9.20566 13.0929 9.05501C13.1286 8.90437 13.1289 8.74748 13.0937 8.5967C13.0366 8.35806 13.0074 8.11357 13.0068 7.86818C13.0077 7.01271 13.348 6.19254 13.9529 5.58764C14.5578 4.98274 15.378 4.64251 16.2334 4.64161C16.6736 4.64043 17.1092 4.7305 17.5127 4.90615C17.9163 5.0818 18.2791 5.3392 18.5781 5.66212C18.6935 5.7862 18.8386 5.87871 18.9998 5.93085C19.161 5.98299 19.3329 5.99303 19.499 5.96001C19.9098 5.88006 20.3147 5.7724 20.7109 5.63775C20.4407 6.19072 20.0953 6.70369 19.6846 7.16212Z" />
+                                        </svg></a>
+                                </li>
+                                <li><a href="https://instagram.com/eng_profi1?igshid=NTc4MTIwNjQ2YQ=="><svg width="24"
+                                            height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M17.34 5.46C17.1027 5.46 16.8707 5.53038 16.6733 5.66224C16.476 5.79409 16.3222 5.98151 16.2313 6.20078C16.1405 6.42005 16.1168 6.66133 16.1631 6.89411C16.2094 7.12689 16.3236 7.34071 16.4915 7.50853C16.6593 7.67635 16.8731 7.79064 17.1059 7.83694C17.3387 7.88324 17.5799 7.85948 17.7992 7.76866C18.0185 7.67783 18.2059 7.52402 18.3378 7.32668C18.4696 7.12935 18.54 6.89734 18.54 6.66C18.54 6.34174 18.4136 6.03652 18.1885 5.81147C17.9635 5.58643 17.6583 5.46 17.34 5.46ZM21.94 7.88C21.9206 7.0503 21.7652 6.2294 21.48 5.45C21.2257 4.78313 20.83 4.17928 20.32 3.68C19.8248 3.16743 19.2196 2.77418 18.55 2.53C17.7727 2.23616 16.9508 2.07721 16.12 2.06C15.06 2 14.72 2 12 2C9.28 2 8.94 2 7.88 2.06C7.04915 2.07721 6.22734 2.23616 5.45 2.53C4.78168 2.77665 4.17693 3.16956 3.68 3.68C3.16743 4.17518 2.77418 4.78044 2.53 5.45C2.23616 6.22734 2.07721 7.04915 2.06 7.88C2 8.94 2 9.28 2 12C2 14.72 2 15.06 2.06 16.12C2.07721 16.9508 2.23616 17.7727 2.53 18.55C2.77418 19.2196 3.16743 19.8248 3.68 20.32C4.17693 20.8304 4.78168 21.2234 5.45 21.47C6.22734 21.7638 7.04915 21.9228 7.88 21.94C8.94 22 9.28 22 12 22C14.72 22 15.06 22 16.12 21.94C16.9508 21.9228 17.7727 21.7638 18.55 21.47C19.2196 21.2258 19.8248 20.8326 20.32 20.32C20.8322 19.8226 21.2283 19.2182 21.48 18.55C21.7652 17.7706 21.9206 16.9497 21.94 16.12C21.94 15.06 22 14.72 22 12C22 9.28 22 8.94 21.94 7.88ZM20.14 16C20.1327 16.6348 20.0178 17.2637 19.8 17.86C19.6403 18.2952 19.3839 18.6884 19.05 19.01C18.7256 19.3405 18.3332 19.5964 17.9 19.76C17.3037 19.9778 16.6748 20.0927 16.04 20.1C15.04 20.15 14.67 20.16 12.04 20.16C9.41 20.16 9.04 20.16 8.04 20.1C7.38089 20.1123 6.72459 20.0109 6.1 19.8C5.68578 19.6281 5.31136 19.3728 5 19.05C4.66809 18.7287 4.41484 18.3352 4.26 17.9C4.01586 17.2952 3.88044 16.6519 3.86 16C3.86 15 3.8 14.63 3.8 12C3.8 9.37 3.8 9 3.86 8C3.86448 7.35106 3.98295 6.70795 4.21 6.1C4.38605 5.67791 4.65627 5.30166 5 5C5.30381 4.65617 5.67929 4.3831 6.1 4.2C6.70955 3.98004 7.352 3.86508 8 3.86C9 3.86 9.37 3.8 12 3.8C14.63 3.8 15 3.8 16 3.86C16.6348 3.86728 17.2637 3.98225 17.86 4.2C18.3144 4.36865 18.7223 4.64285 19.05 5C19.3777 5.30718 19.6338 5.68273 19.8 6.1C20.0223 6.70893 20.1373 7.35178 20.14 8C20.19 9 20.2 9.37 20.2 12C20.2 14.63 20.19 15 20.14 16ZM12 6.87C10.9858 6.87198 9.99496 7.17453 9.15265 7.73942C8.31035 8.30431 7.65438 9.1062 7.26763 10.0438C6.88089 10.9813 6.78072 12.0125 6.97979 13.0069C7.17886 14.0014 7.66824 14.9145 8.38608 15.631C9.10392 16.3474 10.018 16.835 11.0129 17.0321C12.0077 17.2293 13.0387 17.1271 13.9755 16.7385C14.9123 16.35 15.7129 15.6924 16.2761 14.849C16.8394 14.0056 17.14 13.0142 17.14 12C17.1413 11.3251 17.0092 10.6566 16.7512 10.033C16.4933 9.40931 16.1146 8.84281 15.6369 8.36605C15.1592 7.88929 14.5919 7.51168 13.9678 7.25493C13.3436 6.99818 12.6749 6.86736 12 6.87ZM12 15.33C11.3414 15.33 10.6976 15.1347 10.15 14.7688C9.60234 14.4029 9.17552 13.8828 8.92348 13.2743C8.67144 12.6659 8.6055 11.9963 8.73398 11.3503C8.86247 10.7044 9.17963 10.111 9.64533 9.64533C10.111 9.17963 10.7044 8.86247 11.3503 8.73398C11.9963 8.6055 12.6659 8.67144 13.2743 8.92348C13.8828 9.17552 14.4029 9.60234 14.7688 10.15C15.1347 10.6976 15.33 11.3414 15.33 12C15.33 12.4373 15.2439 12.8703 15.0765 13.2743C14.9092 13.6784 14.6639 14.0454 14.3547 14.3547C14.0454 14.6639 13.6784 14.9092 13.2743 15.0765C12.8703 15.2439 12.4373 15.33 12 15.33Z" />
+                                        </svg></a>
+                                </li>
+                                <li><a href="#https://www.facebook.com/brklib/">
+                                        <svg width="24" height="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M15.12 5.32003H17V2.14003C16.0897 2.04538 15.1751 1.99865 14.26 2.00003C11.54 2.00003 9.67999 3.66003 9.67999 6.70003V9.32003H6.60999V12.88H9.67999V22H13.36V12.88H16.42L16.88 9.32003H13.36V7.05003C13.36 6.00003 13.64 5.32003 15.12 5.32003Z" />
+                                        </svg></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="weekends">
+                            <p>Sat - Sun<br>
+                                10:00 am - 06:00 pm</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="footer-container__bottom">
+                    <ul class="footer-bottom">
+                        <li>2023</li>
+                        <li class="school-name"><a href="https://rs.school/js-stage0/">The Rolling Scopes School</a>
+                        </li>
+                        <li><a href="https://github.com/Yuliafire">Yulia</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--end of footer-->
+
+
+    <!--MODALS-->
+    <!--login form-->
+    <div class="wrapper-modal" id="wrapperModal">
+        <dialog class="wrapper-login close outside-click" id="loginForm">
+            <div class="form-box login-form">
+                <h2>Login</h2>
+                <form action="#">
+                    <div class="form__container">
+                        <div class="input-box">
+                            <label>E-mail or reader's card</label>
+                            <input type="email" required id="emailInput">
+                        </div>
+                        <div class="input-box">
+                            <label>Password</label>
+                            <input type="password" required id="passwordInput">
+                        </div>
+                        <button class="login-button" id="btnLogIn" type="submit">Log In</button>
+                        <p class="reg">Don't have an account? <a href="#" class="reg-link"
+                                id="registerFormLink">Register</a>
+                        </p>
+                    </div>
+                </form>
+                <button type="button" class="cross-login" id="crossLogin"><svg width="19" height="19" viewBox="0 0 19 19"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 16.8507L17 2.00003" stroke="#0C0C0E" stroke-width="3" />
+                        <path d="M2 2.14926L17 17" stroke="#0C0C0E" stroke-width="3" />
+                    </svg>
+                </button>
+            </div>
+        </dialog>
+
+    add all menus here  outside click   = closest method   (parent element)
+
+    <!--register form-->
+    <dialog class="wrapper-register close outside-click" id="registerForm">
+        <div class="form-box register-form">
+
+            <h2>Register</h2>
+            <form action="#">
+                <div class="register__container">
+                    <div class="input-box">
+                        <label>First name</label>
+                        <input type="name=" required id="registerName">
+                    </div>
+                    <div class="input-box">
+                        <label>Last name</label>
+                        <input type="name" required id="registerFamilyName">
+                    </div>
+                    <div class="input-box">
+                        <label>Email</label>
+                        <input type="email" required id="registerEmail">
+                    </div>
+                    <div class="input-box">
+                        <label>Password</label>
+                        <input type="password" minlength="8" required id="registerPassword">
+                    </div>
+
+                    <button class="register-button" id="signUpRegister" type="submit">Sign Up</button>
+                    <p class="log">Already have an account? <a href="#" class="login-link" id="loginFormLink">Log in</a>
+                    </p>
+                </div>
+            </form>
+            <button type="button" class="cross-register" id="crossRegister"><svg width="19" height="19"
+                    viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 16.8507L17 2.00003" stroke="#0C0C0E" stroke-width="3" />
+                    <path d="M2 2.14926L17 17" stroke="#0C0C0E" stroke-width="3" />
+                </svg>
+            </button>
+        </div>
+    </dialog>
+
+
+    <!--PROFILE MODAL-->
+    <!-- firts part -->
+    <!-- whole section -->
+    <dialog class="modal-profile close" id="modalProfile">
+       <!--start of right box -->
+        <div class="modal-profile__info">
+            <div class="modal-profile__info-container">
+                <h2 class="modal-profile__title">my profile</h2>
+                <div class="user-data">
+                    <div class="visits">
+                        <p>Visits</p>
+                        <img src="" />
+                        <span></span>
+                    </div>
+                    <div class="bonuses">
+                        <p>Bonuses</p>
+                        <img src="" />
+                        <span></span>
+                    </div>
+                    <div class="books">
+                        <p>Books</p>
+                        <img src="" />
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="rented-books">
+                    <h3 class="rented-books__title">Rented books</h3>
+                    <ul class="rented-books__names">
+                        <li>The Last Queen, Clive Irving</li>
+                        <li>Dominicana, Angie Cruz</li>
+                    </ul>
+                </div>
+
+                <div class="cards-number">
+                    <p>Card number</p>
+                    <p class="cards-number number">F00234030</p>
+                </div>
+
+                <button type="button" class="cross-profile" id="crossProfile">
+                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 16.8507L17 2.00003" stroke="#0C0C0E" stroke-width="3" />
+                    <path d="M2 2.14926L17 17" stroke="#0C0C0E" stroke-width="3" />
+                </svg>
+            </button>
+            </div>   <!--modal-profile__info-->
+        </div>       <!--modal-profile__info-container-->
+<!--end  of right box -->
+
+ <!--start of left box -->
+  <div class="modal-profile__user">
+    <div class="modal-profile__user-container">
+        <div class="user-avatar">
+            <p class="user-avatar-initials" id="userAvatarInitials">JD</p>
+        </div>
+        <div class="user-name">
+            <p class="full-name-user" id="fullNameUser">John Doe</p>
+        </div>
+      </div>
+    </div>
+ <!--end of left box -->
+</dialog>
+</div>  
+</div>
+
+    <script src="./index.js"></script>
+    <script src='./slider.js'></script>
+</body>
+</html>

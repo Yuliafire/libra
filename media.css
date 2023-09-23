@@ -1,0 +1,433 @@
+:root {
+    /* Colors */
+    --color-black-rus: #0C0C0E;
+    --color-black: #000000;
+    --color-beige: #BB945F;
+    --color-white: #FFFFFF;
+    --color-grey: #8E8E8E;
+
+    /* Fonts */
+    --font-family-forum: 'Forum';
+    --font-family-inter-bold: 'Inter';
+    --font-family-inter-reg: 'Inter';
+}
+
+
+@media (max-width: 1419px) {
+
+    .favorites__books-cont-first,
+    .favorites__books-cont-second,
+    .favorites__books-cont-third,
+    .favorites__books-cont-fourth,
+    .favorites__books-cont-fifth,
+    .favorites__books-cont-sixth,
+    .favorites__books-cont-seventh,
+    .favorites__books-cont-eighth {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 1110px) {
+    .profile-icon {
+        margin-right: 80px;
+        z-index: 2000;
+    }
+
+    .header {
+        height: 90px;
+    }
+
+    /*burger menu styling*/
+    .menu__list {
+        display: none;
+        display: flex;
+        flex-direction: column;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .menu {
+        position: absolute;
+        right: -332px;
+        top: 0;
+        width: 332px;
+        height: 570px;
+        background-color: #0C0C0E;
+        z-index: 1;
+        visibility: hidden;
+    }
+
+    .menu.open .menu__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        row-gap: 30px;
+        list-style-type: none;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .menu__link {
+        font-size: 20px;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 50px;
+        color: white;
+    }
+
+    .header__burger-btn {
+        display: block;
+    }
+
+
+    .header.open .menu {
+        transform: translateX(-100%);
+        visibility: visible;
+    }
+
+    .library-card__title h2,
+    .find-card h2 {
+        margin-left: 5px;
+    }
+
+    .library-cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .get-card {
+        align-self: center;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .get-card__text h2 {
+        margin-left: 4px;
+        margin-top: 2px;
+    }
+
+    .get-card p {
+        display: block;
+        text-align: center;
+        width: 650px;
+        display: block;
+    }
+
+    .get-card .buttons {
+        align-self: center;
+        padding-top: 0px;
+        margin-left: 4px;
+    }
+
+    .get-card__text p {
+        margin-top: -35px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .welcome {
+        object-fit: cover;
+        width: 100%;
+        height: 600px;
+    }
+
+    .favorites__books-cont-first,
+    .favorites__books-cont-second,
+    .favorites__books-cont-third,
+    .favorites__books-cont-fourth,
+    .favorites__books-cont-fifth,
+    .favorites__books-cont-sixth,
+    .favorites__books-cont-seventh,
+    .favorites__books-cont-eighth {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .header__logo .logo-text a {
+        font-size: 25px;
+    }
+
+    .menu__list a {
+        font-size: 18px;
+    }
+
+    .favorites__books-cont-first,
+    .favorites__books-cont-second,
+    .favorites__books-cont-third,
+    .favorites__books-cont-fourth,
+    .favorites__books-cont-fifth,
+    .favorites__books-cont-sixth,
+    .favorites__books-cont-seventh,
+    .favorites__books-cont-eighth {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .library-cards-container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .get-card {
+        align-self: center;
+        text-align: center;
+    }
+
+    .get-card p {
+        text-align: center;
+        width: 650px;
+    }
+
+    .get-card .buttons {
+        align-self: center;
+        margin-top: -49px;
+        margin-left: 4px;
+    }
+
+    .coffee-shop__menu {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .coffee-shop__menu-drinks {
+        align-self: flex-start;
+    }
+
+    .get-card p {
+        display: block;
+        text-align: center;
+        width: 650px;
+        display: block;
+    }
+
+    .get-card .buttons {
+        align-self: center;
+        padding-top: 40px;
+        margin-left: 4px;
+    }
+
+    .get-card__text p {
+        margin-top: -35px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .about,
+    .favorites,
+    .coffee-shop,
+    .contacts,
+    .library-card,
+    .footer {
+        max-width: 768px;
+        width: 100%;
+    }
+
+    .arrays {
+        display: inline-flex;
+        margin-top: 34px;
+    }
+
+    .slider-container {
+        display: flex;
+        gap: 58px;
+    }
+
+    /* header start */
+
+    .header__logo .logo-text a {
+        font-size: 30px;
+    }
+
+    .profile-icon {
+        z-index: 2000;
+        margin-right: 85px;
+    }
+
+    .header {
+        height: 90px;
+    }
+
+    /* header end */
+
+    .welcome {
+        background-image: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.10) 50%, transparent 50%), url('./assets/img/768pixbackground.png');
+        object-fit: cover;
+        max-width: 768px;
+        height: 600px;
+        background-position-y: center;
+    }
+
+    .button-prev,
+    .button-next {
+        display: block;
+    }
+
+    .slider-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .slider-item:first-child {
+        align-items: center;
+    }
+
+    .slider-item:nth-child(2) {
+        /* display: none; */
+    }
+
+    .slider-item:last-child {
+        /* display: none; */
+    }
+
+    .slider-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 475px;
+    }
+
+    .slider-track {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .slider-item img {
+        align-self: center;
+    }
+
+    .pagination-button.medium {
+        display: flex;
+    }
+
+    .pagination-container {
+        margin-top: 10px;
+    }
+
+    .favorites__title h2 {
+        margin-left: 3px;
+    }
+
+    .book-item {
+        margin-left: -20px;
+    }
+
+    .coffee-shop__menu {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .coffee-shop__menu-drinks {
+        align-self: flex-start;
+    }
+
+    .library-card__title h2,
+    .find-card h2 {
+        margin-top: 2px;
+        margin-left: 5px;
+    }
+
+    .find-card h2 {
+        margin-top: 0px;
+    }
+
+    .library-cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .get-card {
+        align-self: center;
+        text-align: center;
+    }
+
+    .get-card__text h2 {
+        margin-left: 4px;
+        margin-top: -20px;
+    }
+
+    .get-card__text p {
+        padding-top: 15px;
+    }
+
+    .get-card p {
+        display: block;
+        text-align: center;
+        width: 600px;
+        display: block;
+    }
+
+    .get-card .buttons {
+        align-self: center;
+        padding-top: 45px;
+        margin-left: 4px;
+    }
+
+    .get-card__text p {
+        margin-top: -35px;
+    }
+
+    .form-container {
+        margin-top: 12px;
+    }
+
+    .contacts-wrapper {
+        flex-direction: column;
+        gap: 100px;
+        margin-left: 2px;
+        justify-content: center;
+    }
+
+    .contacts__title h2 {
+        margin-left: 6px;
+    }
+
+    .contacts-wrapper .location img {
+        margin-left: 16px;
+    }
+
+    .coffee-shop__title h2 {
+        margin-left: 4px;
+    }
+
+    .coffee-shop__title p {
+        width: 101%;
+        text-align: center;
+    }
+
+    .favorites__books-cont-first,
+    .favorites__books-cont-second,
+    .favorites__books-cont-third,
+    .favorites__books-cont-fourth,
+    .favorites__books-cont-fifth,
+    .favorites__books-cont-sixth,
+    .favorites__books-cont-seventh,
+    .favorites__books-cont-eighth {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .location img {
+        align-self: center;
+        padding-right: 35px;
+    }
+
+    .footer-bottom .school-name {
+        margin-right: 60px;
+    }
+}
